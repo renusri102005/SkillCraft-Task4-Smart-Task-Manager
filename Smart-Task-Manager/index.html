@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TaskFlow Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+
+<div class="bg-blur one"></div>
+<div class="bg-blur two"></div>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <h2>TaskFlow</h2>
+
+            <ul>
+
+                <li class="nav-item active" data-page="dashboard">
+
+                    🏠 Dashboard
+
+                </li>
+
+                <li class="nav-item" data-page="tasks">
+
+                    📋 My Tasks
+
+                </li>
+
+                <li class="nav-item" data-page="analytics">
+
+                    📊 Analytics
+
+                </li>
+
+                <li class="nav-item" data-page="completed">
+
+                    ✅ Completed
+
+                </li>
+
+                <li class="nav-item" data-page="settings">
+
+                    ⚙ Settings
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <p>
+                Productivity is built daily.
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1 id="pageTitle">
+                    Dashboard
+                </h1>
+
+                <p id="liveClock"></p>
+
+            </div>
+
+            <button id="themeBtn">
+                🌙
+            </button>
+
+        </div>
+
+        <!-- DASHBOARD -->
+
+        <section class="page active-page" id="dashboard">
+
+            <div class="welcome-card">
+
+                <h2>
+                    Welcome Back 👋
+                </h2>
+
+                <p>
+                    Manage your productivity smarter.
+                </p>
+
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h2 id="totalTasks">0</h2>
+
+                    <span>Total Tasks</span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2 id="completedTasks">0</h2>
+
+                    <span>Completed</span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2 id="pendingTasks">0</h2>
+
+                    <span>Pending</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TASKS -->
+
+        <section class="page" id="tasks">
+
+            <div class="task-panel">
+
+                <div class="task-form">
+
+                    <input type="text"
+                    id="taskInput"
+                    placeholder="Enter task">
+
+                    <input type="date"
+                    id="taskDate">
+
+                    <select id="priority">
+
+                        <option value="High">
+                            High
+                        </option>
+
+                        <option value="Medium">
+                            Medium
+                        </option>
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                    </select>
+
+                    <button id="addTaskBtn">
+
+                        Add Task
+
+                    </button>
+
+                </div>
+
+                <input type="text"
+                id="searchInput"
+                placeholder="Search tasks">
+
+                <ul id="taskList"></ul>
+
+                <div id="emptyState">
+
+                    <h2>
+                        No Tasks Yet
+                    </h2>
+
+                    <p>
+                        Add tasks to begin.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ANALYTICS -->
+
+        <section class="page" id="analytics">
+
+            <div class="analytics-card">
+
+                <h2>
+                    Productivity Analytics
+                </h2>
+
+                <div class="progress-top">
+
+                    <span>Progress</span>
+
+                    <span id="progressText">0%</span>
+
+                </div>
+
+                <div class="progress-bg">
+
+                    <div class="progress-bar"
+                    id="progressBar"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- COMPLETED -->
+
+        <section class="page" id="completed">
+
+            <div class="completed-card">
+
+                <h2>
+                    Completed Tasks
+                </h2>
+
+                <ul id="completedList"></ul>
+
+            </div>
+
+        </section>
+
+        <!-- SETTINGS -->
+
+        <section class="page" id="settings">
+
+            <div class="settings-card">
+
+                <h2>
+                    App Settings
+                </h2>
+
+                <button id="clearAllBtn">
+
+                    Clear All Tasks
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
